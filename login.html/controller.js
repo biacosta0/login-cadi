@@ -34,4 +34,4 @@ function salvarUser(){
    let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th>";
 
   }
- 
+  
