@@ -21,7 +21,7 @@ function salvarUser(){
  
     if(nomeUser){
       dadosLista.push(nomeUser);
-      console.log(dadosLista);
+      //console.log(dadosLista);
       crialista();
       document.getElementById('nomeUser').value = "";
 
@@ -40,3 +40,10 @@ function salvarUser(){
    }
   }
   
+  //FUNÇÃO PARA EXCLUIR NOME DE LISTA
+
+  function excluir(i){
+    dadosLista.splice((i - 1), 1);
+    document.getElementById('tabela').deleteEow(i);
+
+  }
