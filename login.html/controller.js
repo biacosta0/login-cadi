@@ -22,6 +22,7 @@ function salvarUser(){
     if(nomeUser){
       dadosLista.push(nomeUser);
       console.log(dadosLista);
+      crialista();
       document.getElementById('nomeUser').value = "";
 
     } else{
