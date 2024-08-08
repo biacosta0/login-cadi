@@ -1,5 +1,5 @@
 
-//VALIDAÇÃO DE PREENCHIMENTOet
+//VALIDAÇÃO DE PREENCHIMENTO
 function acessar(){
     let loginEmail = document.getElementById('loginEmail').value;
     let loginSenha = document.getElementById('loginSenha').value;
@@ -18,13 +18,13 @@ var dadosLista = [];
  
 function salvarUser(){
     let nomeUser = document.getElementById('nomeUser').value;
- 
+  
     if(nomeUser){
       dadosLista.push(nomeUser);
       //console.log(dadosLista);
       crialista();
       document.getElementById('nomeUser').value = "";
-
+     //cria lista é responsavel por atualizar a lista de nomes exibidas na página
     } else{
         alert("Favor, informar um nome para cadastro");
     } 
@@ -35,7 +35,7 @@ function salvarUser(){
     let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th>";
    //LAÇO DE REPETIÇÃO
     for(let i = 0; i <=(dadosLista.length - 1); i ++){
-      tabela += "<tr><td>" + dadosLista[i] + "</td><td> <button onclick='editar(this.parenTnode.rowIndex)'> Editar </button> <button onclick='excluir(this.parenTnode.rowIndex)'> Excluir </button></td></tr>";
+      tabela += "<tr><td>" + dadosLista[i] + "</td><td> <button onclick='editar(this.parentNode.parentNode.rowIndex)'> Editar </button> <button onclick='excluir(this.parentNode.parentNode.rowIndex)'> Excluir </button></td></tr>";
       document.getElementById('tabela').innerHTML = tabela;
     }
    }
@@ -46,7 +46,7 @@ function salvarUser(){
   function excluir(i){
     dadosLista.splice((i - 1), 1);
     document.getElementById('tabela').deleteRow(i);
-
+   //O método `splice` em JavaScript é uma função versátil que permite modificar arrays ao inserir ou remover elementos em posições específicas, tornando a manipulação de arrays mais eficiente.
   }
 
   //FUNÇAÕ EDITAR NOME DA LISTA
@@ -54,4 +54,5 @@ function salvarUser(){
   function editar(i){
     document.getElementById("nomeUser").value = dadosLista[(i - 1)];
     dadosLista.splice(dadosLista[(i - 1)], 1);
+
   }
