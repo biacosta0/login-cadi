@@ -32,13 +32,14 @@ function salvarUser(){
 
   //FUNÇÃO DE CRIAÇÃO DE LISTA
   function crialista(){
-   let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th>";
-  //LAÇO DE REPETIÇÃO
-   for(let i = 0; i <=(dadosLista.length - 1); i ++){
-     tabela += "<tr><td>" + dadosLista[i] + "</td><td> <button onclick='editar(this.parenTnode.rowIndex)'> Editar </button> <button onclick='excluir(this.parenTnode.rowIndex)'> Excluir </button></td></tr>";
-     document.getElementById('tabela').innerHTML = tabela;
+    let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th>";
+   //LAÇO DE REPETIÇÃO
+    for(let i = 0; i <=(dadosLista.length - 1); i ++){
+      tabela += "<tr><td>" + dadosLista[i] + "</td><td> <button onclick='editar(this.parenTnode.rowIndex)'> Editar </button> <button onclick='excluir(this.parenTnode.rowIndex)'> Excluir </button></td></tr>";
+      document.getElementById('tabela').innerHTML = tabela;
+    }
    }
-  }
+  
   
   //FUNÇÃO PARA EXCLUIR NOME DE LISTA
 
