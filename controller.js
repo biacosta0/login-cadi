@@ -15,12 +15,16 @@ function acessar(){
 //FUNÇÃO DE CRIAÇÃO DE ARRAY PARA ARMAZENAMENTO DE NOMES
  
 var dadosLista = [];
- 
+  //A linha var dadosLista = []; cria uma variável chamada dadosLista e atribui a ela um array vazio. Isso significa que você agora tem uma caixa (o array) onde poderá armazenar dados, mas essa caixa está inicialmente vazia.
+
 function salvarUser(){
     let nomeUser = document.getElementById('nomeUser').value;
     
     if(nomeUser){
       dadosLista.push(nomeUser);
+      //Adiciona elementos: Coloca os elementos especificados no final do array.
+     //Retorna o novo comprimento: Após adicionar os elementos, o método push() retorna o novo comprimento do array.
+     //Modifica o array original: O método push() altera o array original, adicionando os novos elementos.
       //console.log(dadosLista);
       crialista();
       document.getElementById('nomeUser').value = "";

@@ -15,7 +15,7 @@ A seguir, a função verifica se algum desses valores é vazio (falsy). Se um do
 Se ambos os campos estiverem preenchidos, a função redireciona o usuário para a página cadastro.html utilizando window.location.href.
 
 # 2. Função salvarUser()  
-![Função Salvar](img/funcao-salvarusuario.png)
+![Função Salvar](img/funcao_SalvarUsuario.png)
 
 Objetivo: Adicionar um nome à lista de usuários (armazenada em um array) e atualizar a tabela que exibe essa lista.
 Funcionamento:
