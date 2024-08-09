@@ -35,6 +35,7 @@ Se o campo nomeUser estiver vazio, a função exibe um alerta solicitando que um
 ◦ Exibir todos os nomes em uma lista.
 ◦ Buscar por um nome específico.
 ◦ Realizar cálculos ou outras operações com os dados.
+
 4 Persistência: Embora o array no exemplo seja armazenado na memória do navegador, você pode estender essa funcionalidade para salvar os dados em um arquivo local ou em um servidor, garantindo a persistência dos dados mesmo após a página ser recarregada.
 
 # 3. Função crialista()  
@@ -69,7 +70,7 @@ tem menu de contexto
 # Quando e Como Usar Arrays
 • JavaScript: Arrays em JavaScript são extremamente úteis para:  
 ◦ Armazenar listas de itens (números, strings, objetos, etc.).  
-◦ Iterar sobre esses itens usando loops.  
+◦ Alterar sobre esses itens usando loops.  
 ◦ Manipular dados de forma eficiente.  
 • Outras Linguagens: Em linguagens server-side, arrays são usados para:  
 ◦ Armazenar dados provenientes de bancos de dados ou outras fontes.  
