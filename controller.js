@@ -18,7 +18,7 @@ var dadosLista = [];
  
 function salvarUser(){
     let nomeUser = document.getElementById('nomeUser').value;
-  
+    
     if(nomeUser){
       dadosLista.push(nomeUser);
       //console.log(dadosLista);
@@ -41,14 +41,14 @@ function salvarUser(){
    }
   
   
-  //FUNÇÃO PARA EXCLUIR NOME DE LISTA
+  //FUNÇÃO PARA EXCLUIR NOME DE LISTAS
 
   function excluir(i){
     dadosLista.splice((i - 1), 1);
     document.getElementById('tabela').deleteRow(i);
    //O método `splice` em JavaScript é uma função versátil que permite modificar arrays ao inserir ou remover elementos em posições específicas, tornando a manipulação de arrays mais eficiente.
   }
-
+s
   //FUNÇAÕ EDITAR NOME DA LISTA
 
   function editar(i){
