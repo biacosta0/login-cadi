@@ -80,5 +80,53 @@ tem menu de contexto
 ![Resultado-Projeto](img/Resultado-Projeto.png)
 
 Agora iremos ver o resultado com nome salvo:  
-![Nome-salvo](img/Nome-Salvo.png)
+![Nome-salvo](img/Nome-Salvo.png) 
 
+# Campo De Email
+
+&lt;label for=""&gt; Email:&lt;label&gt;:  
+• O elemento <label> é usado para associar um rótulo a um campo de entrada (input) em um formulário.  
+• O atributo for="" geralmente é usado para especificar o id do campo de entrada que o rótulo está   descrevendo. No entanto, neste caso, o atributo for está vazio, o que significa que não está explicitamente associado a nenhum campo de entrada.  
+• O texto "Email:" é o rótulo que será exibido ao lado do campo de entrada.  
+&lg;input type="text" class="form-control" id="nomeUser"&gt;:  
+• O elemento &lt;input&gt; cria um campo de entrada de texto.  
+• O atributo type="text" especifica que o campo é do tipo texto.  
+• class="form-control" atribui a classe CSS form-control ao campo, que geralmente é usada em frameworks como Bootstrap para estilizar campos de formulário.  
+• id="nomeUser" define um identificador único para o campo de entrada. Este id pode ser usado para associar o rótulo ao campo ou para aplicar estilos ou scripts ao campo.  
+&lt;button type="button" class="btn btn-warning"&gt;SALVAR&gt;button&gt;:  
+• O elemento &lt;button&gt; cria um botão no formulário.  
+• type="button" indica que este botão não envia o formulário quando clicado. Ele pode ser usado para outras ações, como executar um script JavaScript.  
+• class="btn btn-warning" atribui classes CSS ao botão, que geralmente são usadas em frameworks como Bootstrap para estilizar o botão (neste caso, como um botão de aviso ou atenção).  
+• O texto "SALVAR" será exibido no botão, indicando ao usuário que este botão serve para salvar alguma informação.  
+
+## validação de email: 
+
+![checar-email](img/checar-email.png)
+
+## Explicação Detalhada: 
+
+1- definição da função:  
+
+Esta linha define uma nova função chamada salvarUser. O código dentro das chaves {} será executado quando a função for chamada.  
+
+2- Obtenção dos Valores dos Campos:  
+
+Estas linhas obtêm os valores dos campos de entrada no formulário. document.getElementById('nomeUser') seleciona o elemento com o ID nomeUser, e .value obtém o valor inserido pelo usuário nesse campo. O mesmo se aplica ao campo emailUser.  
+
+3-Validação do E-mail:  
+
+Este bloco de código verifica se o e-mail é válido:
+
+document.getElementById('emailUser').value == "" verifica se o campo de e-mail está vazio.  
+document.getElementById('emailUser').value.indexOf('@') == -1 verifica se o caractere @ está presente no e-mail.     
+document.getElementById('emailUser').value.indexOf('.') == -1 verifica se o caractere . está presente no e-mail.   
+Se qualquer uma dessas condições for verdadeira, isso indica que o e-mail é inválido.  
+
+4- Exibição da Mensagem de Alerta e Retorno:  
+
+alert("Por favor, informar um E-mail válido"); exibe uma mensagem de alerta para o usuário.
+return false; encerra a execução da função e indica que a validação falhou. Em contextos de formulários, isso pode impedir que o formulário seja enviado.  
+
+##  Observações
+Validação do E-mail: A validação implementada é bastante simples e pode não cobrir todos os casos de e-mails válidos, mas é suficiente para um exemplo básico.  
+Uso do return false: Em muitos casos, você usaria return false para evitar o envio do formulário, mas isso pode precisar de ajustes dependendo do contexto onde a função salvarUser é utilizada.  
