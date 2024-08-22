@@ -1,4 +1,3 @@
-
 // Validação de preenchimento
 function acessar() {
   let loginEmail = document.getElementById('loginEmail').value;
@@ -21,6 +20,8 @@ var emailLista = [];
 
 function salvarUser() {
   let nomeUser = document.getElementById('nomeUser').value;
+
+  
 
   if (nomeUser) {
     dadosLista.push(nomeUser);
@@ -129,7 +130,7 @@ function crialista() {
 //Função para editar nomes da lista
 
 function editar(i) {
-  document.getElementById('nomeUser').value = dadosLista[(i - i)];s
+  document.getElementById('nomeUser').value = dadosLista[(i - i)];
   dadosLista.splice(dadosLista[(i - 1)], 1);
   document.getElementById('emailUser').value = salvaEmail[(i - i)];
   salvaEmail.splice(salvaEmail[(i - 1)], 1);
@@ -144,4 +145,4 @@ function excluir(i) {
   document.getElementById('tabela').deleteRow(i);
 
 
-}s
+}
