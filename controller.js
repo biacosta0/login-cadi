@@ -20,7 +20,7 @@ var emailLista = [];
 
 function salvarUser() {
   let nomeUser = document.getElementById('nomeUser').value;
- let email = document.getElementById('emailUser').value;
+  let email = document.getElementById('emailUser').value;
 
  if (document.getElementById('emailUser').value == "" ||
     document.getElementById('emailUser').value.indexOf('@') == -1 ||
@@ -147,7 +147,8 @@ function editar(i) {
 //Função para excluir
 
 function excluir(i) {
-  dadosLista.splice((i - 1), 1)
+  dadosLista.splice((i - 1), 1);
+  salvaEmail.splice((i - 1), 1);
   document.getElementById('tabela').deleteRow(i);
 
 
