@@ -129,4 +129,24 @@ return false; encerra a execução da função e indica que a validação falhou
 
 ##  Observações
 Validação do E-mail: A validação implementada é bastante simples e pode não cobrir todos os casos de e-mails válidos, mas é suficiente para um exemplo básico.  
-Uso do return false: Em muitos casos, você usaria return false para evitar o envio do formulário, mas isso pode precisar de ajustes dependendo do contexto onde a função salvarUser é utilizada.  
+Uso do return false: Em muitos casos, você usaria return false para evitar o envio do formulário, mas isso pode precisar de ajustes dependendo do contexto onde a função salvarUser é utilizada.    
+
+## Explicação para armazenar o Email:
+
+dadosLista.splice((i - 1), 1);:  
+
+dadosLista é um array que provavelmente contém uma lista de dados (talvez registros ou itens de uma tabela).  
+O método splice é usado para modificar o array. O primeiro argumento (i - 1) é o índice onde a modificação começa, e o segundo argumento 1 indica que queremos remover 1 item a partir desse índice.  
+Subtraímos 1 de i porque os índices dos arrays em JavaScript são baseados em zero (ou seja, começam em 0), enquanto i parece ser baseado em 1 (talvez a contagem de linhas ou itens na interface do usuário).
+salvaEmail.splice((i - 1), 1);:  
+
+salvaEmail parece ser um array que armazena e-mails (ou talvez dados relacionados a e-mails).  
+Da mesma forma que com dadosLista, estamos removendo 1 item a partir do índice (i - 1) no array salvaEmail.  
+document.getElementById('tabela').deleteRow(i);:  
+ 
+Aqui, estamos interagindo com a DOM (Document Object Model) da página web.  
+document.getElementById('tabela') seleciona um elemento HTML com o id "tabela", que provavelmente é uma tabela.  
+O método deleteRow(i) remove a linha com o índice i da tabela. Mais uma vez, i    
+
+![armazenar-email](img/armazenar-email.png)
+
